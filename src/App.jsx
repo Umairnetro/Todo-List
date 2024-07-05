@@ -112,40 +112,6 @@ function App() {
                   key={items.id}
                   className="todo p-3 rounded mt-3 bg-primary bg-opacity-10 d-flex align-items-center d-flex justify-content-between gap-3"
                 >
-                  <div className="d-flex gap-3 justify-content-center">
-                    <input
-                      name={items.id}
-                      className="form-check-input"
-                      onChange={handleCheckbox}
-                      type="checkbox"
-                      checked={items.isCompleted}
-                    />
-                    <div
-                      className={
-                        items.isCompleted ? "text-decoration-line-through" : ""
-                      }
-                    >
-                      {items.todo}
-                    </div>
-                  </div>
-                  <div className="buttons">
-                    <button
-                      onClick={(e) => {
-                        handleEdit(e, items.id);
-                      }}
-                      className="btn btn-primary "
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={(e) => {
-                        handleDelete(e, items.id);
-                      }}
-                      className="btn btn-primary mx-2"
-                    >
-                      Delete
-                    </button>
-                  </div>
                 </div>
               )
             );
